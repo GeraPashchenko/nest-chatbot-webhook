@@ -19,7 +19,7 @@ There are 2 routs:
 
 ## ![Alt text](image-1.png)
 
-### POST `/webhook/order` - send a order message ( a message with the sku) to confirm your order
+### POST `/webhook/order` - send an order message ( a message with the sku) to confirm your order
 
 ## ![Alt text](image-2.png)
 
