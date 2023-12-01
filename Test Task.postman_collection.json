@@ -1,68 +1,58 @@
 {
-	"info": {
-		"_postman_id": "c29ca76b-836a-4fcf-a41f-24af83034754",
-		"name": "Test Task",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "9712943"
-	},
-	"item": [
-		{
-			"name": "Classify",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"message\": \"May I ask someone?\",\r\n    \"recieverId\": \"8d513f33-57c0-4105-ac2b-83570e69f3d1\",\r\n    \"clientId\": \"21cd06dc-c13a-4ee8-a21b-c0879f7ce230\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:3000/webhook/classify",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"webhook",
-						"classify"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Order",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"message\": \"Here is my SKU: som/UA-/1\",\r\n    \"recieverId\": \"8d513f33-57c0-4105-ac2b-83570e69f3d1\",\r\n    \"clientId\": \"21cd06dc-c13a-4ee8-a21b-c0879f7ce230\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:3000/webhook/order",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"webhook",
-						"order"
-					]
-				}
-			},
-			"response": []
-		}
-	]
+  "info": {
+    "_postman_id": "c29ca76b-836a-4fcf-a41f-24af83034754",
+    "name": "Test Task",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "9712943"
+  },
+  "item": [
+    {
+      "name": "Classify",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"message\": \"May I ask someone?\",\r\n    \"receiverId\": \"8d513f33-57c0-4105-ac2b-83570e69f3d1\",\r\n    \"clientId\": \"21cd06dc-c13a-4ee8-a21b-c0879f7ce230\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/webhook/classify",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["webhook", "classify"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Order",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"message\": \"Here is my SKU: som/UA-/1\",\r\n    \"receiverId\": \"8d513f33-57c0-4105-ac2b-83570e69f3d1\",\r\n    \"clientId\": \"21cd06dc-c13a-4ee8-a21b-c0879f7ce230\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/webhook/order",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["webhook", "order"]
+        }
+      },
+      "response": []
+    }
+  ]
 }

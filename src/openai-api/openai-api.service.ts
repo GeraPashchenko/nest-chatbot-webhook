@@ -61,7 +61,7 @@ export class OpenAiAPIService {
         messages: [
           {
             role: 'system',
-            content: `Read the following user message, fine there an SKU and say thay order is confirmed.`,
+            content: `Read the following user message, fine there an SKU and say they order is confirmed.`,
           },
           {
             role: 'user',

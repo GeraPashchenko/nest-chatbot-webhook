@@ -22,10 +22,10 @@ export class WebhookService {
     return this.messageDbService.storeMessage(classifiedMessage);
   }
 
-  logMesage(messageInput: IMessageEntity) {
+  logMessage(messageInput: IMessageEntity) {
     const replMessageObject = {
-      [MessageClassification.CONNECT_WITH_AGENT]: 'Thank you for your mesage!',
-      [MessageClassification.LEAVE_REVIEW]: 'Thank you for your mesage!',
+      [MessageClassification.CONNECT_WITH_AGENT]: 'Thank you for your message!',
+      [MessageClassification.LEAVE_REVIEW]: 'Thank you for your message!',
       [MessageClassification.MAKE_ORDER]: 'Please, provide an order SKU',
     };
 

@@ -18,7 +18,7 @@ export class InputMessageDto {
 
   @IsUUID()
   @Length(1, 250)
-  recieverId: string;
+  receiverId: string;
 
   @IsOptional()
   @Transform(({ value }) => new Date(value))

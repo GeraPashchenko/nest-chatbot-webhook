@@ -10,7 +10,7 @@ export class WebhookController {
   @Post('classify')
   async classifyMessage(@Body() dto: InputMessageDto) {
     const classifiedMessage = await this.webhookService.classify(dto);
-    return this.webhookService.logMesage(classifiedMessage);
+    return this.webhookService.logMessage(classifiedMessage);
   }
 
   @Post('order')

@@ -6,5 +6,5 @@ export interface IMessageEntity {
   timestamp: number;
   message: string;
   clientId: string; // uuid
-  recieverId: string; // uuid
+  receiverId: string; // uuid
 }

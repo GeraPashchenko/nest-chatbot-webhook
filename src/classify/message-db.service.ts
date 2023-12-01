@@ -25,20 +25,20 @@ export class MessageDBService {
         (m: IMessageEntity) => m.messageId === messageInput,
       );
 
-    const { clientId, recieverId } = messageInput;
+    const { clientId, receiverId } = messageInput;
     console.log(this.messagesDB);
 
     return this.messagesDB.messages.some(
       (m: IMessageEntity) =>
-        m.clientId === clientId && m.recieverId === recieverId,
+        m.clientId === clientId && m.receiverId === receiverId,
     );
   }
 
   private checkOrderExists(messageInput: InputMessageDto): boolean {
-    const { clientId, recieverId } = messageInput;
+    const { clientId, receiverId } = messageInput;
 
     return this.messagesDB.orders.some(
-      (o) => o.clientId === clientId && o.recieverId === recieverId,
+      (o) => o.clientId === clientId && o.receiverId === receiverId,
     );
   }
 
@@ -63,7 +63,7 @@ export class MessageDBService {
     console.log(messageExists, orderExists);
 
     if (orderExists || !messageExists)
-      throw new UnprocessableEntityException('Unprocessible Order');
+      throw new UnprocessableEntityException('Unprocessable Order');
 
     const processedOrder = {
       ...messageDto,
