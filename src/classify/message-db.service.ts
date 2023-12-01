@@ -26,7 +26,6 @@ export class MessageDBService {
       );
 
     const { clientId, receiverId } = messageInput;
-    console.log(this.messagesDB);
 
     return this.messagesDB.messages.some(
       (m: IMessageEntity) =>
@@ -60,7 +59,6 @@ export class MessageDBService {
   storeOrder(messageDto: IOrderInput): IOrder {
     const messageExists = this.checkMessageExists(messageDto);
     const orderExists = this.checkOrderExists(messageDto);
-    console.log(messageExists, orderExists);
 
     if (orderExists || !messageExists)
       throw new UnprocessableEntityException('Unprocessable Order');
@@ -73,7 +71,6 @@ export class MessageDBService {
 
     this.messagesDB.orders.push(processedOrder);
 
-    console.info(this.messagesDB);
     return processedOrder;
   }
 
